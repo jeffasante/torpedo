@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torpedo - Web Steganography Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Torpedo <a href="https://jeffasante.github.io" class="author-pill">jeff</a></h1>
+            <p>Hide messages in images</p>
+        </header>
+
+        <div class="demo-section">
+            <div class="encode-section">
+                <h2>Encode Message</h2>
+                <div class="input-group">
+                    <label for="imageInput">Select Image:</label>
+                    <input type="file" id="imageInput" accept="image/*">
+                </div>
+                <div class="input-group">
+                    <label for="messageInput">Message to Hide:</label>
+                    <textarea id="messageInput" placeholder="Enter your secret message..."></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="passwordInput">Password (optional):</label>
+                    <input type="password" id="passwordInput" placeholder="Encryption password">
+                </div>
+                <button id="encodeBtn" onclick="encodeMessage()">Encode Message</button>
+                <div id="encodeResult"></div>
+            </div>
+
+            <div class="decode-section">
+                <h2>Decode Message</h2>
+                <div class="input-group">
+                    <label for="stegoInput">Select Stego Image:</label>
+                    <input type="file" id="stegoInput" accept="image/*">
+                </div>
+                <div class="input-group">
+                    <label for="decodePasswordInput">Password:</label>
+                    <input type="password" id="decodePasswordInput" placeholder="Decryption password">
+                </div>
+                <button id="decodeBtn" onclick="decodeMessage()">Decode Message</button>
+                <div id="decodeResult"></div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>How it works</h3>
+            <p>Torpedo uses LSB (Least Significant Bit) steganography to hide data in the least significant bits of image pixels. This makes the changes virtually invisible to the human eye.</p>
+            <ul>
+                <li>Supports PNG, JPEG, WebP, BMP and other formats</li>
+                <li>Optional XOR encryption with password</li>
+                <li>Capacity: ~1 byte per 8 pixels</li>
+                <li>Uses browser Canvas API for format conversion</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="torpedo.js"></script>
+    <script src="torpedo_web.js"></script>
+</body>
+</html>

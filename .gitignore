@@ -1,0 +1,32 @@
+# Compiled binaries
+torpedo
+*.exe
+*.out
+
+# Object files
+*.o
+*.obj
+
+# WebAssembly output
+web/torpedo.js
+web/torpedo.wasm
+
+# Test files
+test_*.bmp
+test_*.txt
+decoded.*
+stego.*
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+build/
+dist/

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Torpedo WASM Test</title>
+</head>
+<body>
+    <h1>Torpedo WASM Test</h1>
+    <p>Check browser console for WASM loading status.</p>
+    
+    <script src="torpedo.js"></script>
+    <script>
+        console.log('Loading Torpedo WASM...');
+        
+        TorpedoModule().then(module => {
+            console.log('✓ Torpedo WASM loaded successfully!');
+            console.log('Available functions:', Object.keys(module).filter(k => k.startsWith('_torpedo')));
+            
+            // Test capacity calculation
+            const capacity = module._torpedo_get_capacity_js(100, 100);
+            console.log('Capacity for 100x100 image:', capacity, 'bytes');
+            
+        }).catch(err => {
+            console.error('✗ Failed to load WASM:', err);
+        });
+    </script>
+</body>
+</html>

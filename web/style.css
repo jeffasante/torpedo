@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Geist Mono', monospace;
+    background: #ffffff;
+    color: #666666;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.author-pill {
+    background: #f0f0f0;
+    color: #666666;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.author-pill:hover {
+    background: #e0e0e0;
+    color: #333333;
+}
+
+header p {
+    font-size: 14px;
+    color: #999999;
+    font-weight: 400;
+}
+
+.demo-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.encode-section, .decode-section {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.encode-section h2, .decode-section h2 {
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 400;
+    color: #666666;
+    font-size: 13px;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    font-family: 'Geist Mono', monospace;
+    font-size: 13px;
+    color: #000000;
+    background: #ffffff;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    outline: none;
+    border-color: #000000;
+}
+
+.input-group textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+button {
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-family: 'Geist Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+button:hover {
+    background: #333333;
+}
+
+button:active {
+    background: #000000;
+}
+
+#encodeResult, #decodeResult {
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    min-height: 40px;
+}
+
+.success {
+    background: #f0f9f0;
+    color: #2d5a2d;
+    border: 1px solid #d4edda;
+}
+
+.error {
+    background: #fdf2f2;
+    color: #7a2e2e;
+    border: 1px solid #f5c6cb;
+}
+
+.success a {
+    color: #2d5a2d;
+    text-decoration: underline;
+}
+
+.success button {
+    background: #2d5a2d;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-family: 'Geist Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 8px;
+    width: auto;
+}
+
+.success button:hover {
+    background: #1a3d1a;
+}
+
+.info-section {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.info-section h3 {
+    color: #000000;
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.info-section p {
+    margin-bottom: 12px;
+    color: #666666;
+    font-size: 13px;
+}
+
+.info-section ul {
+    margin-left: 16px;
+    color: #666666;
+}
+
+.info-section li {
+    margin-bottom: 4px;
+    font-size: 13px;
+}
+
+pre {
+    font-family: 'Geist Mono', monospace;
+    background: #f8f8f8;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #000000;
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .demo-section {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .container {
+        padding: 20px 16px;
+    }
+    
+    header h1 {
+        font-size: 20px;
+    }
+}
