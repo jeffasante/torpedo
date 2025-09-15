@@ -7,9 +7,9 @@ torpedo
 *.o
 *.obj
 
-# WebAssembly output
-web/torpedo.js
-web/torpedo.wasm
+# WebAssembly output (commented out to include in repo)
+# web/torpedo.js
+# web/torpedo.wasm
 
 # Test files
 test_*.bmp
